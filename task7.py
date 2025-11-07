@@ -14,10 +14,10 @@ def Hemming_code(nums):
 while True:
     print('Для выхода напишите "exit"')
     x = input("Введите сообщение без пробелов: ")
-    while not(set(x) <= {"0", "1"}):
+    while not(set(x) <= {"0", "1"}) and len(x) != 7:
         if x == "exit":
             break
-        print("Ошибочный ввод. Допустимые символы: 0, 1")
+        print("Ошибочный ввод. Допустимые символы: 0, 1. Длина входящего сообщения составляет 7 символов")
         x = input("Введите сообщение: ")
     if x == "exit":
         break
@@ -25,5 +25,4 @@ while True:
 
     r = Hemming_code(N)
     print(f"Правильное сообщение: {r[2]}{r[4]}{r[5]}{r[6]}\n")
-
 
